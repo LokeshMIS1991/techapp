@@ -9,4 +9,4 @@ env/
 # Python temp / cache files
 __pycache__/
 *.pyc
-.env
+.env'n*.json

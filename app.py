@@ -3,6 +3,7 @@ from modules.components import load_styles, render_brand_header
 from modules.auth import authenticate_user
 from views import tech_view, manager_view, admin_view, tech_perf_view, site_history_view
 
+# Page Configuration
 st.set_page_config(
     page_title="Sidharth Shutter & Automation",
     page_icon="⚙️",
@@ -10,10 +11,10 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Apply CSS & Gradient Themes
+# Apply CSS & Gradient Brand Styling
 load_styles()
 
-# Authentication Session State
+# Initialize Session State for Authentication
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
     st.session_state.user_info = None
@@ -47,7 +48,7 @@ else:
     
     st.sidebar.title("Navigation Menu")
     
-    # Role-Based Permissions
+    # Role-Based Permission Menus
     if user['role'] == "Worker":
         menu = ["Daily Job Sheet Entry", "Site Timeline Audit", "My Performance Report"]
     elif user['role'] == "Manager":
@@ -68,14 +69,14 @@ else:
         st.session_state.user_info = None
         st.rerun()
 
-    # View Routing
+    # View Routing Logic
     if choice == "Daily Job Sheet Entry":
         tech_view.render(user)
     elif choice == "Manager Scoreboard":
         manager_view.render(user)
     elif choice == "Admin Dashboard & Financials":
         admin_view.render(user)
-    elif choice == "Technician Performance Reports" or choice == "My Performance Report":
+    elif choice in ["Technician Performance Reports", "My Performance Report"]:
         tech_perf_view.render()
     elif choice == "Site Timeline Audit":
         site_history_view.render()
