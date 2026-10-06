@@ -1,12 +1,10 @@
 # Virtual environment (Do NOT push to Git)
-myvenv/
-.venv/
-env/
-
+*.json
 # Streamlit secrets (Do NOT push to Git)
 .streamlit/secrets.toml
-
+myvenv/
+venv/
+.venv/
 # Python temp / cache files
 __pycache__/
 *.pyc
-.env'n*.json
