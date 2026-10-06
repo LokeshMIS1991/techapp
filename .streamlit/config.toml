@@ -1,0 +1,6 @@
+[theme]
+primaryColor = "#0D3B85"          # Deep Cobalt Blue
+backgroundColor = "#0B101D"       # Dark Slate Base
+secondaryBackgroundColor = "#162032" # Card Base
+textColor = "#FFFFFF"             # Crisp White Text
+font = "sans serif"

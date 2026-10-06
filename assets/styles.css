@@ -1,0 +1,31 @@
+/* Signature Gradient Buttons */
+div.stButton > button {
+    background: linear-gradient(135deg, #0D3B85 0%, #216BD6 100%) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 0.65rem 1.6rem !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease-in-out !important;
+    box-shadow: 0 4px 14px rgba(13, 59, 133, 0.35) !important;
+}
+
+/* Gradient Hover State (Fades into Tech Green Accent) */
+div.stButton > button:hover {
+    background: linear-gradient(135deg, #1E5BB8 0%, #00A859 100%) !important;
+    box-shadow: 0 6px 18px rgba(0, 168, 89, 0.45) !important;
+    transform: translateY(-2px);
+}
+
+/* Accent Tech Green Highlights */
+.brand-green {
+    color: #00A859 !important;
+    font-weight: bold;
+}
+
+/* Responsive Containment for Ultrawide Displays */
+.main .block-container {
+    max-width: 1450px;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+}
